@@ -101,7 +101,7 @@ class AnytaskConfig:
 
         logging.info("Loading configuration from '%s'", filename)
 
-        if self._config.read(filename) == []:
+        if self._config.read(filename, encoding='utf-8') == []:
             logging.critical("Can't load config file '%s'", filename)
             raise ConfigParseError()
 
